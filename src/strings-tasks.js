@@ -509,9 +509,9 @@ function encodeToRot13(str) {
     charMap.set(alphabet[i], rot13Alphabet[i]);
   }
 
-  return str.replace(/[a-zA-Z]/g, function (char) {
-    return charMap.has(char) ? charMap.get(char) : char;
-  });
+  return str.replace(/[a-zA-Z]/g, (char) =>
+    charMap.has(char) ? charMap.get(char) : char
+  );
 }
 
 /**
